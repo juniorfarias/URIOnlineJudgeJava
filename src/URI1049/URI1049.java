@@ -7,34 +7,39 @@ public class URI1049 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		String filo = input.next();;
+		String filo = input.next();
 		String classe = input.next();
 		String ordem = input.next();
 		
-		if(filo == "vertebrado") {
-			if(classe == "ave") {
-				if(ordem == "canivoro") System.out.println("aguia");
-				else System.out.println("pomba");	
-			} else {
-				if(classe == "mamifero") {
-					if(ordem == "onivoro") System.out.println("homem");
-					else System.out.println("vaca");	
-				}
-			}
-		} else {
-			if(classe == "inseto") {
-				if(ordem == "hematofago") System.out.println("pulga");
-				else System.out.println("lagarta");	
-			} else {
-				if(classe == "anelideo") {
-					if(ordem == "hematofago") System.out.println("sanguessuga");
-					else System.out.println("minhoca");	
-				}
-			}
+		String animal = "";
+		if(filo.equals("vertebrado") && classe.equals("ave") && ordem.equals("carnivoro")) {
+			animal = "aguia";
+		}
+		if(filo.equals("vertebrado") && classe.equals("ave") && ordem.equals("onivoro")) {
+			animal = "pomba";
+		}
+		if(filo.equals("vertebrado") && classe.equals("mamifero") && ordem.equals("onivoro")) {
+			animal = "homem";			
+		}
+		if(filo.equals("vertebrado") && classe.equals("mamifero") && ordem.equals("herbivoro")) {
+			animal = "vaca";
+		}
+		if(filo.equals("invertebrado") && classe.equals("inseto") && ordem.equals("hematofago")) {
+			animal = "pulga";
+		}
+		if(filo.equals("invertebrado") && classe.equals("inseto") && ordem.equals("herbivoro")) {
+			animal = "lagarta";
+		}
+		if(filo.equals("invertebrado") && classe.equals("anelideo") && ordem.equals("hematofago")) {
+			animal = "sanguessuga";
+		}
+		if(filo.equals("invertebrado") && classe.equals("anelideo") && ordem.equals("onivoro")) {
+			animal = "minhoca";
 		}
 		
+		System.out.println(animal);
 		
-
+		input.close();
 	}
 
 }
