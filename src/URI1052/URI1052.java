@@ -8,6 +8,7 @@ public class URI1052 {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
 		int mes = input.nextInt();
+		input.close();
 		switch (mes) {
 		case 1: {
 			System.out.println("January");
